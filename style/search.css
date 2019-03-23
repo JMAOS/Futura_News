@@ -1,0 +1,28 @@
+#searchDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 2em;
+  margin-bottom: 1em;
+}
+
+#searchBtn {
+  height: 100%;
+  padding: 6px 10px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+#searchBtn:hover {
+  background: #ccc;
+}
+
+#searchBar {
+  width: 20%;
+}
+/*# sourceMappingURL=search.css.map */

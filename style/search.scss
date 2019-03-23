@@ -1,0 +1,24 @@
+#searchDiv{
+    display: flex;
+    justify-content: center;
+    height: 2em;
+    margin-bottom: 1em;
+    
+}
+
+#searchBtn{
+  height: 100%;
+  padding: 6px 10px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+
+  &:hover{
+    background: #ccc;
+  }
+}
+
+#searchBar{
+  width: 20%;
+}
