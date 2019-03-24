@@ -29,6 +29,11 @@ switch(currentSite){
         break;
     case "search.html": 
         searchBtn.addEventListener("click", getQuery);
+        document.addEventListener("keydown", function(e){
+            if(e.keyCode == "13"){
+                getQuery();
+            }
+        }); 
         break;
 }
 
@@ -54,17 +59,21 @@ function render(res){
         article.className = "newsArticle";
         let title = document.createElement("h2");
         let paragraph = document.createElement("p");
-        //let newsURL = document.createElement("p");
+        let newsURL;
         let newsIMG = document.createElement("img")
 
         title.textContent = element.title;
         paragraph.textContent = element.description;
-        //newsURL.textContent = element.url;
+        newsURL = element.url;
         newsIMG.src = element.urlToImage;
 
         article.appendChild(title);
         article.appendChild(paragraph);
         article.appendChild(newsIMG);
+
+        article.addEventListener("click",function(){
+                window.open(newsURL,'_blank');
+        });
 
         newsSection.appendChild(article);
     });

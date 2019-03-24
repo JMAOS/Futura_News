@@ -1,26 +1,60 @@
 $primary-color: red;
-$secondary-color: #F06449;
+$secondary-color: #C61111;
 $grey-base: #D3D3D3;
 $primary-font: 'Oswald', sans-serif;
 
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 body{
   margin: 0;
+  padding: 0;
   font-family: $primary-font;
+  height: 100%;
 }
 
+#wrapper{
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 4em;
+}
+
+/****************************/
 header{
   margin-left: 3%;
+}
+
+h1{
+margin-bottom: 0;
 }
 
 span{
   color: $primary-color;
 }
 
+#headerParagraph{
+  margin-top: 0;
+}
+
+#dividerLine{
+  height: 1em;
+  background-color: $secondary-color;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
-    margin-bottom: 25px;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
     padding: 0;
     overflow: hidden;
     display: flex;
@@ -41,9 +75,9 @@ ul {
   }
 
 #newsDiv{
-    width: 80%;
+    width: 85%;
     height: 100%;
-    margin-left: 10%;
+    margin-left: 7.5%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(5,1fr);
@@ -56,6 +90,7 @@ article{
     padding: 10px;
     border-radius: 0.8%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 
     &:hover{
       margin: -10px;
@@ -65,7 +100,7 @@ article{
 
 img{
     width: 95%;
-    height: 40%;
+    height: 45%;
     margin-left: 2.5%;
     border-radius: 0.8%;
 }
@@ -75,9 +110,58 @@ footer{
   margin: 0;
   margin-top: 1.5em;
   width: 100%;
-  height: 5%;
+  height: 2em;
   color: white;
   background-color: red;
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+h3{
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 1600px){
+  #newsDiv{
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(7,1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1.5em;
+}
+
+}
+
+@media only screen and (max-width: 1300px){
+  #newsDiv{
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(10,1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1.5em;
+}
+
+}
+
+@media only screen and (max-width: 750px){
+  #newsDiv{
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(20,1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1.5em;
+}
+
 }
