@@ -61,11 +61,17 @@ function render(res){
         let paragraph = document.createElement("p");
         let newsURL;
         let newsIMG = document.createElement("img")
-
+        
         title.textContent = element.title;
         paragraph.textContent = element.description;
         newsURL = element.url;
-        newsIMG.src = element.urlToImage;
+        if(element.urlToImage == "") {
+            newsIMG.src = "img/noimage-1.png";
+        }
+        else {
+            newsIMG.src = element.urlToImage;
+        }
+
 
         article.appendChild(title);
         article.appendChild(paragraph);
@@ -89,3 +95,4 @@ function getQuery(){
     req = new Request(urlSearch + "q=" + searchQuery + "&apiKey=462d92a7733345858b5247b4686fdfee");
     fetchNews();
 }
+

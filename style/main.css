@@ -44,6 +44,11 @@ span {
   background-color: #C61111;
 }
 
+/*Navigation Bar*/
+.active {
+  background-color: #C61111;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -63,6 +68,10 @@ li {
   background-color: red;
 }
 
+li:hover {
+  background-color: #971313;
+}
+
 li a {
   display: block;
   color: white;
@@ -71,6 +80,7 @@ li a {
   text-decoration: none;
 }
 
+/*------------------------------------*/
 #newsDiv {
   width: 85%;
   height: 100%;
@@ -86,7 +96,7 @@ li a {
 }
 
 article {
-  max-width: 100%;
+  width: 100%;
   padding: 10px;
   border-radius: 0.8%;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -101,8 +111,9 @@ article:hover {
 
 img {
   width: 95%;
-  height: 45%;
+  height: 40%;
   margin-left: 2.5%;
+  max-height: 200px;
   border-radius: 0.8%;
 }
 
